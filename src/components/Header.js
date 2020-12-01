@@ -1,24 +1,35 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Footer from './Footer'
-import avatar from '../assets/images/avatar.jpg'
 
-const Header = () => (
-  <header id="header">
-    <div className="inner">
-      <a href="#" className="image avatar">
-        <img src={avatar} alt="" />
-      </a>
-      <h1>
-        <strong>I am Strata</strong>, a super simple
-        <br />
-        responsive site template freebie
-        <br />
-        crafted by <a href="http://html5up.net">HTML5 UP</a>.
-      </h1>
-    </div>
-    <Footer />
-  </header>
-)
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      avatar: file(relativePath: { eq: "avatar.jpg" }) {
+        childImageSharp {
+          fixed(width: 200, height: 200, quality: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <header id="header">
+      <div className="inner">
+        <a href="#" className="image avatar">
+          <Img fixed={data.avatar.childImageSharp.fixed} />
+        </a>
+        <h1>
+          <strong>Value Added Service</strong>
+        </h1>
+      </div>
+      <Footer />
+    </header>
+  )
+}
 
 export default Header
