@@ -37,7 +37,12 @@ const HomeIndex = ({ data }) => {
             fotowoltaicznej po wstępnej analizie najkorzystniejszej
             opłacalności.
           </p>
-          <Img fixed={data.signature.childImageSharp.fixed} />
+          <p>
+            <Img fixed={data.phone.childImageSharp.fixed} />
+          </p>
+          <p>
+            <Img fixed={data.signature.childImageSharp.fixed} />
+          </p>
         </section>
       </div>
     </Layout>
@@ -51,6 +56,13 @@ export const query = graphql`
     signature: file(relativePath: { eq: "signature.jpg" }) {
       childImageSharp {
         fixed(width: 300, quality: 90) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    phone: file(relativePath: { eq: "phone.jpg" }) {
+      childImageSharp {
+        fixed(width: 149, quality: 99) {
           ...GatsbyImageSharpFixed
         }
       }

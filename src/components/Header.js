@@ -29,7 +29,9 @@ const Header = () => {
           <Img fixed={data.avatar.childImageSharp.fixed} />
         </a>
         <h1>
-          <strong>Instalacje fotowoltaiczne</strong>
+          <strong>
+            Profesjonalne doradztwo fotowoltaiczne dla Twojej firmy
+          </strong>
         </h1>
       </div>
       <Footer />
