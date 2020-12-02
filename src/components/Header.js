@@ -9,9 +9,14 @@ const Header = () => {
     query HeaderQuery {
       avatar: file(relativePath: { eq: "avatar.jpg" }) {
         childImageSharp {
-          fixed(width: 200, height: 200, quality: 90) {
+          fixed(width: 250, height: 350, quality: 90) {
             ...GatsbyImageSharpFixed
           }
+        }
+      }
+      site {
+        siteMetadata {
+          title
         }
       }
     }
@@ -24,7 +29,7 @@ const Header = () => {
           <Img fixed={data.avatar.childImageSharp.fixed} />
         </a>
         <h1>
-          <strong>Value Added Service</strong>
+          <strong>Instalacje fotowoltaiczne</strong>
         </h1>
       </div>
       <Footer />
