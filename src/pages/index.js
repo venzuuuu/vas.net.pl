@@ -18,7 +18,7 @@ const HomeIndex = ({ data }) => {
           <h1>Profesjonalne doradztwo fotowoltaiczne dla firm</h1>
           <h2>Drodzy Państwo,</h2>
           <p>
-            serdecznie witamy na naszej stronie przedstawiającej naszą firmę z
+            serdecznie witamy na stronie przedstawiającej naszą firmę z
             dziedziny doradztwa fotowoltaicznego. Z sukcesem działamy w branży
             odnawialnych źródeł energii od 2017 roku, a moc zrealizowanych przez
             nas instalacji fotowoltaicznych przekracza 4 MW (4000 kW).
