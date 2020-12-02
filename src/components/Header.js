@@ -28,11 +28,6 @@ const Header = () => {
         <a href="#" className="image avatar">
           <Img fixed={data.avatar.childImageSharp.fixed} />
         </a>
-        <h1>
-          <strong>
-            Profesjonalne doradztwo fotowoltaiczne dla Twojej firmy
-          </strong>
-        </h1>
       </div>
       <Footer />
     </header>
