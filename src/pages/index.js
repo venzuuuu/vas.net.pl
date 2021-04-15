@@ -15,7 +15,7 @@ const HomeIndex = ({ data }) => {
 
       <div id="main">
         <section id="one">
-          <h1>Profesjonalne doradztwo fotowoltaiczne dla firm</h1>
+          <h1>PROFESJONALNE DORADZTWO FOTOWOLTAICZNE DLA FIRM</h1>
           <h2>Drodzy Państwo,</h2>
           <p>
             serdecznie witamy na stronie przedstawiającej naszą firmę z
